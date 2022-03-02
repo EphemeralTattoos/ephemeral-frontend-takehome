@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include partials/header %>
+    <title><%= config[0]['Title'] %></title>
+    <% if (config[0]['Header Image']) { %>
+      <meta property="og:image" content="<%= config[0]['Header Image'] %>" />
+    <% } else if (config[0]['Background Image']) { %>
+      <meta property="og:image" content="<%= config[0]['Background Image'] %>" />
+    <% } %>
+    <style>
+      <% if (config[0]['Google Font Name']) { %>
+        @import url('https://fonts.googleapis.com/css?family=<%= config[0]['Google Font Name'].replace(/ /g, '+') %>:<%= config[0]['Google Font Style'].replace('Italics', 'ital').replace('Regular', '') %>,wght@1,<%= config[0]['Google Font Weight'] %>&display=swap');
+      <% } %>
+
+      :root {
+        <% if (config[0]['Google Font Name']) { %>
+          --font: '<%= config[0]['Google Font Name'] %>';
+        <% } %>
+
+        --style: <%= config[0]['Google Font Style'].replace('Italics', 'italic') %>;
+        --weight: <%= config[0]['Google Font Weight'] %>;
+        --size: <%= config[0]['Base Text Size'] %>;
+
+        <% if (config[0]['Text Color']) { %>
+            --color: <%= config[0]['Text Color'] %>;
+        <% } %>
+
+        <% if (config[0]['Link Text Size']) { %>
+            --link-size: <%= config[0]['Link Text Size'] %>;
+        <% } %>
+      }
+
+      <% if (config[0]['Background Image']) { %>
+        body {
+            background-image: url("<%= config[0]['Background Image'] %>");
+        }
+      <% } %>
+    </style>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    
+    <% if (config[0]['Tracking ID']) { %>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121430921-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', '<%= config[0]['Tracking ID'] %>');
+    </script>
+    <% } %>
+  </head>
+  <body class="<%= config[0]['Style'].toLowerCase().replace(/ /g,'-').replace(/[^\w-]+/g,'') %>">
+    <% if (config[0]['Header Image']) { %>
+      <h1><img src="<%= config[0]['Header Image'] %>" title="<%= config[0]['Title'] %>" class="logo" /></h1>
+    <% } else { %>
+      <h1><%= config[0]['Title'] %></h1>
+    <% } %>
+    <ul>
+    <%  for (let link of links){ %>
+      <% if (config[0]['Style'] === 'Side Scrolling') { %>
+        <div class="marquee link">
+          <div class="marquee__inner">
+            <a href="<%= link.URL %>"><%= link.Label %></a> <a href="<%= link.URL %>"><%= link.Label %></a> <a href="<%= link.URL %>"><%= link.Label %></a> <a href="<%= link.URL %>"><%= link.Label %></a>
+          </div>
+        </div>
+      <% } else { %>
+        <a href="<%= link.URL %>" class="link"><%= link.Label %></a>
+      <% } %>
+    <% } %>
+    </ul>
+  </body>
+</html>

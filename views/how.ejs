@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include partials/header %>
+    <title><%= title %></title>
+    <style>
+      :root {
+        --font: 'Courier New';
+        --style: normal;
+        --weight: normal;
+        --size: 30pt;
+        --color: black;
+        --link-size: 30pt;
+      }
+    </style>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style>
+      a {
+        display: inline;
+      }
+      ol {
+        padding-left: 1em;
+      }
+      ol li {
+        margin-bottom: 3em;
+        margin-left: 0;
+      }
+    </style>
+  </head>
+  <body style="text-align: left">
+    <ol>
+      <li class="how-block">
+        <div class="how-block__inner">
+          <h2>Want an linklist?</h2>
+          <p>It's easy, just follow these instructions</p>
+        </div>
+      </li>
+    </ol>
+    <ol>
+      <li class="how-block">
+        <div class="how-block__inner">
+          <h2>1. Create it</h2>
+          <p>Make a copy of this <a href="https://docs.google.com/spreadsheets/d/1cfip2P6Yd7q2whGU5jzjh2nhOqqKsFCwAtaPZMeX-io/copy">starter sheet</a></p>
+        </div>
+      </li>
+      <li class="how-block">
+        <div class="how-block__inner">
+          <h2>2. Link it</h2>
+          <p>Add your URLs and labels in the Links tab</p>
+        </div>
+      </li>
+      <li class="how-block">
+        <div class="how-block__inner">
+          <h2>3. Config it</h2>
+          <p>Tab over to the Config tab</p>
+          <p>If you don’t have a place to host images, sign up for a free image hosting service like <a href="https://cloudinary.com/">cloudinary</a> and upload a background image/gif and optional header image (these will scale to fill the browser width)</p>
+          <p>Try searching <a href="https://giphy.com/">giphy</a> and just save the one you like</p>
+          <p>Once you’ve uploaded it to the cloudinary dashboard paste the file links into the sheet’s image fields </p>
+          <p>Select a <a href="https://fonts.google.com/">google font</a> that fits your vibe and copy the name of the font into the font name field</p>
+          <p>Input a font style (Regular or Italics) or leave empty</p>
+          <p>Input a font weight (copy numbers from google fonts- 100-900) or leave empty</p>
+          <p>Input a text <a href="https://htmlcolorcodes.com/">color hex</a></p>
+          <p>Input a base and link font size (be sure to include px or pt suffix)</p>
+          <p>Input an optional google analytics tracking ID (eg UA-12345678-1)</p>
+        </div>
+      </li>
+      <li class="how-block">
+        <div class="how-block__inner">
+          <h2>4. Style it</h2>
+          <p>Select your style: <a href="/basic">Basic</a>, <a href="/blocks">Blocks</a>, or <a href="/scroll">Side Scrolling</a> (more coming soon)</p>
+        </div>
+      </li>
+      <li class="how-block">
+        <div class="how-block__inner">
+          <h2>5. Publish it</h2>
+          <p>Select File > Share > Publish To Web and select Publish</p>
+          <p>Select Share (top right) > Get Link (change) > none > Anyone with the link</p>
+        </div>
+      </li>
+      <li class="how-block">
+        <div class="how-block__inner">
+          <h2>6. Send it</h2>
+          <p>Copy the share link and send it to me along with your desired url path (eg /pokey)</p>
+        </div>
+      </li>
+    </ol>
+  </body>
+</html>

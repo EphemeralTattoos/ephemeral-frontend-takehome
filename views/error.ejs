@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include partials/header %>
+    <title>404 Page Not Found</title>
+    <style>
+      :root {
+        --font: 'Courier New';
+        --style: normal;
+        --weight: normal;
+        --size: 120px;
+        --color: black;
+        --link-size: 120px;
+      }
+    </style>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style>
+      body {
+        padding: 0;
+      }
+      .link.marquee, .link.marquee:first-child {
+        border: none;
+      }
+      pre {
+        font-size: 24pt;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="/" style="width: 100%; overflow: hidden">
+      <div class="marquee link">
+        <div class="marquee__inner">
+          😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬
+        </div>
+      </div>
+      <div class="marquee link">
+        <div class="marquee__inner" style="animation-delay: -.5s; animation-duration: 9s;">
+          😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬
+        </div>
+      </div>
+      <div class="marquee link">
+        <div class="marquee__inner" style="animation-delay: -.15s; animation-duration: 10s;">
+          😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬
+        </div>
+      </div>
+      <div class="marquee link">
+        <div class="marquee__inner" style="animation-delay: -1s; animation-duration: 9s;">
+          😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬
+        </div>
+      </div>
+      <div class="marquee link">
+        <div class="marquee__inner" style="animation-delay: -1.5s; animation-duration: 12s;">
+          😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬
+        </div>
+      </div>
+      <div class="marquee link">
+        <div class="marquee__inner" style="animation-delay: -.5s; animation-duration: 11s;">
+          😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬
+        </div>
+      </div>
+      <div class="marquee link">
+        <div class="marquee__inner" style="animation-delay: -1s; animation-duration: 9.5s;">
+          😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬
+        </div>
+      </div>
+      <div class="marquee link">
+        <div class="marquee__inner">
+          😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬
+        </div>
+      </div>
+    </a>
+    <pre><%= error.status %></pre>
+  </body>
+</html>
+  

@@ -112,13 +112,13 @@ a {
   }
 
   /* Fauxvetica style */
-  body.fauxvetica{
+  body.fauxvetica {
     text-align: left;
     font-size: var(--size);
     font-family: 'Roboto', sans-serif;
     font-size: 36px;
     text-align: left;
-    padding: 1em 1em 0;
+    padding: 0.75em 0.75em 0;
     color: black;
     color: var(--color);
     margin: 0;
@@ -126,19 +126,14 @@ a {
     font-size: var(--size);
     font-style: var(--style);
     font-weight: var(--weight);
-    /* overflow-wrap: break-word;
-    word-wrap: break-word; */
-
-
   }
 
   body.fauxvetica h1 {
     font-size: 36px;
     font-style: italic;
     font-weight: 900;
-    padding-bottom: 0.2em;
-    font-size: var(--size);
-
+    padding-bottom: 1em;
+    margin: 0;
   }
 
   body.fauxvetica a {
@@ -149,7 +144,6 @@ a {
     padding-bottom: 0.5em;
       font-weight: var(--weight);
     overflow-wrap: break-word;
-
   }
 
   body.fauxvetica a:hover {
@@ -166,21 +160,26 @@ a {
 @media screen and (max-width: 768px)  {
   body {
     font-size: calc(var(--size) / 3);
-
   }
+
   .link {
     font-size: calc(var(--link-size) / 3);
   }
+
   .link.marquee {
     border-width: calc(var(--link-size) / 20);
   }
+
   .link.marquee:first-child {
     border-width: calc(var(--link-size) / 20);
   }
+
   body.blocks .link {
     border-width: calc(var(--link-size) / 20);
   }
+
   body.fauxvetica a.link {
+    border-width: calc(var(--link-size) / 20);
     font-size: calc(var(--link-size) / 2);
     overflow-wrap: break-word;
     word-break: break-all;
@@ -189,7 +188,8 @@ a {
 
 @media screen and (max-width: 400px)  {
   body.fauxvetica a.link {
-    font-size: calc(var(--link-size) / 3);
+    border-width: calc(var(--link-size) / 20);
+    font-size: calc(var(--link-size) / 2);
     overflow-wrap: break-word;
     word-break: break-all;
   }

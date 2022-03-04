@@ -16,7 +16,5 @@
     "morgan": "~1.9.1",
     "nodemon": "^2.0.15"
   },
-  "devDependencies": {
-    "g-sheets-api": "^2.1.2"
-  }
+  "devDependencies": {}
 }

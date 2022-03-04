@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <% include partials/header %>
     <title><%= config[0]['Title'] %></title>
     <% if (config[0]['Header Image']) { %>
@@ -38,7 +39,7 @@
       <% } %>
     </style>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    
+
     <% if (config[0]['Tracking ID']) { %>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121430921-1"></script>
     <script>

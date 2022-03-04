@@ -113,25 +113,17 @@ a {
 
   /* Fauxvetica style */
   body.fauxvetica {
-    text-align: left;
-    font-size: var(--size);
     font-family: 'Roboto', sans-serif;
-    font-size: 36px;
     text-align: left;
     padding: 0.75em 0.75em 0;
-    color: black;
-    color: var(--color);
-    margin: 0;
     font-family: var(--font), 'Roboto', sans-serif;
     font-size: var(--size);
-    font-style: var(--style);
-    font-weight: var(--weight);
+    line-height: 0.75em;
   }
 
   body.fauxvetica h1 {
-    font-size: 36px;
+    font-size: calc(var(--size) / 2);
     font-style: italic;
-    font-weight: 900;
     padding-bottom: 1em;
     margin: 0;
   }
@@ -142,17 +134,17 @@ a {
 
   body.fauxvetica .link {
     padding-bottom: 0.5em;
-      font-weight: var(--weight);
+    font-weight: var(--weight);
     overflow-wrap: break-word;
   }
 
   body.fauxvetica a:hover {
-    background-color: #000000;
+    background-color: var(--color);
     color:#ffffff;
   }
 
   body.fauxvetica a:active {
-    background-color: #000000;
+    background-color: var(--color);
     color:#ffffff;
   }
 
